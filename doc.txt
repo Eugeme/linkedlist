@@ -1,0 +1,69 @@
+class MyLinkedList {
+
+    LinkedListNode head;
+
+
+    public MyLinkedList() {
+        this.
+    }
+//
+//    public int get(int index) {
+//
+//    }
+//
+//    public void addAtHead(int val) {
+//
+//    }
+//
+//    public void addAtTail(int val) {
+//
+//    }
+//
+//    public void addAtIndex(int index, int val) {
+//
+//    }
+//
+//    public void deleteAtIndex(int index) {
+//
+//    }
+}
+
+/**
+ * Your MyLinkedList object will be instantiated and called as such:
+ * MyLinkedList obj = new MyLinkedList();
+ * int param_1 = obj.get(index);
+ * obj.addAtHead(val);
+ * obj.addAtTail(val);
+ * obj.addAtIndex(index,val);
+ * obj.deleteAtIndex(index);
+ */
+
+
+class LinkedListNode {
+
+    int value;
+    LinkedListNode next_node;
+
+    public LinkedListNode(int value, LinkedListNode next_node) {
+        this.value = value;
+        this.next_node = next_node;
+    }
+
+    public String toString(){
+        String result;
+        result = String.valueOf(this.value);
+        if (this.next_node != null){
+            result = result + ", " + this.next_node.toString();
+        }
+        return result;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        LinkedListNode root_1 = new LinkedListNode(1, new LinkedListNode(2, new LinkedListNode(3, null)));
+
+        System.out.println(root_1);
+
+    }
+}
